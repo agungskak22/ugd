@@ -1,4 +1,5 @@
 <template>
+<div style="padding:10px">
   <v-data-table
     :headers="headers"
     :items="mahasiswa"
@@ -39,7 +40,7 @@
                     <v-text-field v-model="editedItem.NomorHandphone" label="Nomor Handphone"></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="editedItem.indexKomulatif" label="Postal Code"></v-text-field>
+                    <v-text-field v-model="editedItem.indexKomulatif" label="IPK"></v-text-field>
                   </v-col>
                 </v-row>
               </v-container>
@@ -73,6 +74,7 @@
       <v-btn color="primary" @click="initialize">Reset</v-btn>
     </template>
   </v-data-table>
+  </div>
 </template>
 <script>
   export default {
@@ -88,24 +90,24 @@
         { text: 'Nomor Mahasiswa', value: 'NomorMahasiswa' },
         { text: 'Umur', value: 'Umur' },
         { text: 'Nomor Handphone', value: 'NomorHandphone' },
-        { text: 'indexKomulatif', value: 'indexKomulatif' },
+        { text: 'IPK', value: 'indexKomulatif' },
         { text: 'Actions', value: 'action', sortable: false },
       ],
       mahasiswa: [],
       editedIndex: -1,
       editedItem: {
         name: '',
-        NomorMahasiswa: 0,
-        Umur: 0,
-        NomorHandphone: 0,
-        indexKomulatif: 0,
+        NomorMahasiswa: '',
+        Umur: '',
+        NomorHandphone: '',
+        indexKomulatif: '',
       },
       defaultItem: {
         name: '',
-        NomorMahasiswa: 0,
-        Umur: 0,
-        NomorHandphone: 0,
-        indexKomulatif: 0,
+        NomorMahasiswa: '',
+        Umur: '',
+        NomorHandphone: '',
+        indexKomulatif: '',
       },
     }),
 
@@ -130,47 +132,47 @@
         this.mahasiswa = [
           {
             name: 'Agung Prio Rismawan',
-            NomorMahasiswa: 12,
-            Umur: 6,
-            NomorHandphone: 24,
-            indexKomulatif: 4.0,
+            NomorMahasiswa: 160709001,
+            Umur: 21,
+            NomorHandphone: '081254026142',
+            indexKomulatif: 3.8
           },
           {
-            name: 'Agung Prio Rismawan',
-            NomorMahasiswa: 13,
-            Umur: 6,
-            NomorHandphone: 24,
-            indexKomulatif: 4.0,
+            name: 'Rius Sabarno',
+            NomorMahasiswa: 160709002,
+            Umur: 22,
+            NomorHandphone: '081245658701',
+            indexKomulatif: 4.0
           },{
-            name: 'Agung Prio Rismawan',
-            NomorMahasiswa: 10,
-            Umur: 6,
-            NomorHandphone: 24,
-            indexKomulatif: 4.0,
+            name: 'Rio Gunawan',
+            NomorMahasiswa: 160709003,
+            Umur: 23,
+            NomorHandphone: '081254036124',
+            indexKomulatif: 3.5
           },{
-            name: 'Agung Prio Rismawan',
-            NomorMahasiswa: 15,
-            Umur: 6,
-            NomorHandphone: 24,
-            indexKomulatif: 4.0,
+            name: 'Yafet trakan Tangkuman',
+            NomorMahasiswa: 160709004,
+            Umur: 22,
+            NomorHandphone: '081243554321',
+            indexKomulatif: 4.0
           },{
-            name: 'Agung Prio Rismawan',
-            NomorMahasiswa: 111,
-            Umur: 6,
-            NomorHandphone: 24,
-            indexKomulatif: 4.0,
+            name: 'RObertus Yudho S',
+            NomorMahasiswa: 160709005,
+            Umur: 21,
+            NomorHandphone: '082354246612',
+            indexKomulatif: 3.6
           },{
-            name: 'Agung Prio Rismawan',
-            NomorMahasiswa: 1120,
-            Umur: 6,
-            NomorHandphone: 24,
-            indexKomulatif: 4.0,
+            name: 'Devina Arnindyasari',
+            NomorMahasiswa: 160709006,
+            Umur: 20,
+            NomorHandphone: '082354246612',
+            indexKomulatif: 4.0
           },{
-            name: 'Agung Prio Rismawan',
-            NomorMahasiswa: 1134,
-            Umur: 6,
-            NomorHandphone: 24,
-            indexKomulatif: 4.0,
+            name: 'Satria nusa paradilaga',
+            NomorMahasiswa: 160709007,
+            Umur: 21,
+            NomorHandphone: '081265431122',
+            indexKomulatif: 4.0
           },
         ]
       },
